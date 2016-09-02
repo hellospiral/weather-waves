@@ -7,7 +7,6 @@ export default Ember.Route.extend({
       return responseJSON;
     });
   },
-
   actions: {
     citySearch: function(params){
       this.transitionTo('current-conditions', params.name);

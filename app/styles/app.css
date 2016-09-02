@@ -28,7 +28,7 @@ div .bar2 {
     font-family: sans-serif;
     font-size: 11px;
 }
-.map-display {
+#map-display {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -36,7 +36,7 @@ div .bar2 {
   z-index: 1;
 }
 
-.weather-display {
+#weather-display {
   position: absolute;
   top: 64px;
   bottom: 0px;
@@ -50,6 +50,10 @@ div .bar2 {
   position: absolute;
   z-index: 2;
   background-color:rgba(0,0,0,0.5)
+}
+
+#birdseye-bar button {
+  margin-bottom: 8px;
 }
 
 #birdseye-bar-text {

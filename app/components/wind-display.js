@@ -2,11 +2,10 @@ import Ember from 'ember';
 import d3 from 'd3';
 
 export default Ember.Component.extend({
-
   map: Ember.inject.service('google-map'),
 
   didInsertElement() {
-    var container = this.$('.map-display')[0];
+    var container = this.$('#map-display')[0];
     var options = {
       center: this.get('map').center(this.get('weather.coord.lat'), this.get('weather.coord.lon')),
       scrollwheel: false,
@@ -14,9 +13,7 @@ export default Ember.Component.extend({
     };
     var fullMap = this.get('map').findMap(container, options);
   },
-
   actions: {
-
     generateWeather() {
       document.getElementById("holder").innerHTML = "";
       var windSpeed = 0;
@@ -25,10 +22,10 @@ export default Ember.Component.extend({
       var weatherCode = weather.weather[0].id;
       if (weather.wind.speed) {
         windSpeed = weather.wind.speed;
-      }
+      };
       if (weather.wind.deg) {
         windRad = (90-weather.wind.deg) * (Math.PI/180);
-      }
+      };
       let svgContainer = d3.select('#holder').append('svg').attr('width',window.innerWidth).attr('height',(window.innerHeight-64));
       var w = 1;
       var c = 1;
@@ -102,7 +99,6 @@ export default Ember.Component.extend({
           .ease('linear');
         }
       }
-
       while (w++ < 200) {
         //Draws the little "dust" squares to show wind direction when there are few/no clouds
         var startXBits = (Math.random()-Math.random())*window.innerWidth;
@@ -120,7 +116,6 @@ export default Ember.Component.extend({
         .attr('y', startYBits + (((windSpeed * 60) * Math.sin(windRad))/(radiusBits/120)) )
         .duration(3000);
       }
-
       while (c++ < this.get('weather.clouds.all')) {
         var startXCloud = Math.random()*window.innerWidth;
         var startYCloud = Math.random()*window.innerHeight;

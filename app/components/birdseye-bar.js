@@ -91,7 +91,6 @@ export default Ember.Component.extend({
           .ease('linear');
         }
       }
-
       while (w++ < 200) {
         //Draws the little "dust" squares to show wind direction when there are few/no clouds
         var startXBits = (Math.random()-Math.random())*window.innerWidth;
@@ -109,7 +108,6 @@ export default Ember.Component.extend({
         .attr('y', startYBits + (((windSpeed * 60) * Math.sin(windRad))/(radiusBits/120)) )
         .duration(3000);
       }
-
       while (c++ < this.get('weather.clouds.all')) {
         var startXCloud = Math.random()*window.innerWidth;
         var startYCloud = Math.random()*window.innerHeight;
