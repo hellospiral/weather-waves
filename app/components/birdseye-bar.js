@@ -8,7 +8,6 @@ export default Ember.Component.extend({
       var windRad = 0;
       var weather = this.get('weather');
       var weatherCode = weather.weather[0].id;
-      console.log(weatherCode);
       if (weather.wind.speed) {
         windSpeed = weather.wind.speed;
       }
@@ -123,9 +122,6 @@ export default Ember.Component.extend({
         .attr('y', startYCloud + (((windSpeed * 60) * Math.sin(windRad))/(radiusCloud/120)) )
         .duration(3000);
       }
-    },
-    weatherNow: function() {
-      console.log(this.get('weather'));
     },
     citySearch: function() {
       var params = {

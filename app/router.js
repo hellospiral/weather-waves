@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('moving-dot');
   this.route('clouds-humidity-scatter', {path: '/clouds-humidity-scatter/:cityName'});
   this.route('clouds-scatter-form');
+  this.route('current-conditions');
 });
 
 export default Router;

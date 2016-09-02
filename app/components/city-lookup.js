@@ -7,7 +7,6 @@ export default Ember.Component.extend({
         cityName: this.get('cityName')
       };
       this.sendAction('setCity', params);
-      console.log(params);
     }
   }
 });

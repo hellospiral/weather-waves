@@ -12,7 +12,6 @@ export default Ember.Component.extend({
       scrollwheel: false,
       zoom: 15
     };
-    console.log(options);
     var fullMap = this.get('map').findMap(container, options);
   },
 
@@ -24,7 +23,6 @@ export default Ember.Component.extend({
       var windRad = 0;
       var weather = this.get('weather');
       var weatherCode = weather.weather[0].id;
-      console.log(weatherCode);
       if (weather.wind.speed) {
         windSpeed = weather.wind.speed;
       }
