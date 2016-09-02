@@ -1,6 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  fullConditions: Ember.computed('weather', function() {
+    var weather = this.get('weather')
+    return weather.weather[0].description;
+  }),
   actions: {
     generateWeather() {
       document.getElementById("holder").innerHTML = "";
@@ -129,6 +133,9 @@ export default Ember.Component.extend({
       };
       document.getElementById("holder").innerHTML = "";
       this.sendAction('citySearch', params);
+    },
+    weatherNow: function() {
+      console.log(this.get('weather'));
     }
   }
 });
