@@ -1,10 +1,19 @@
-# Weather-waves
+# Weather Waves
 
-#https://github.com/d3/d3/wiki
-##Repository for D3 wiki
+Weather Waves is a web application for visualizing weather data. It uses the Open Weather API and D3.js to provide interactive visualizations depending on the user's search queries
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+
+## Technologies used:
+
+* Ember.js
+* D3.js
+* Node
+* Bower
+* Sass
+* Bootstrap
+* Javascript
+* HTML
+* CSS
 
 ## Prerequisites
 
@@ -42,9 +51,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
@@ -53,3 +59,9 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
+## License
+
+This software is licensed under the MIT license.
+
+Copyright (c) 2016 Matt Carlson
