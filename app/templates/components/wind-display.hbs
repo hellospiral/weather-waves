@@ -1,9 +1,6 @@
-<div id="holder">
-  {{userWeather}}
-</div>
-<button {{action 'weatherNow'}}>Weather Now</button>
+<div class="map-display"></div>
 
-<label for="city">Enter a city (without spaces)</label>
-{{input value=city id="city"}}
-<button {{action 'citySearch'}}>Get Weather</button>
-{{weather.cod}}
+<div class="weather-display">
+  <div id="holder"></div>
+</div>
+{{birdseye-bar weather=weather citySearch="citySearch"}}

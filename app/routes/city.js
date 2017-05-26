@@ -7,5 +7,11 @@ export default Ember.Route.extend({
       console.log(responseJSON);
       return responseJSON;
     });
+  },
+  actions: {
+    citySearch: function(params){
+      this.transitionTo('city', params.name);
+      window.location.href = "/city/" + params.name;
+    }
   }
 });
