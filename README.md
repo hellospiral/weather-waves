@@ -1,7 +1,11 @@
 # Weather Waves
 
-Weather Waves is a web application for visualizing weather data. It uses the Open Weather API and D3.js to provide interactive visualizations depending on the user's search queries
+Weather Waves is a web application for visualizing weather data. It uses the Open Weather API and D3.js to provide interactive visualizations depending on the user's search queries.
 
+
+## Try it out:
+
+Try out the app [on Heroku](http://weather-waves.herokuapp.com/)
 
 ## Technologies used:
 
